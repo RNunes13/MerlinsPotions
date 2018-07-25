@@ -1,0 +1,20 @@
+@keyframes animatezoom { from{transform: scale(0)} to {transform: scale(1)} }
+@keyframes animatefadein { from{top:-1px; opacity:0} to {top: 0; opacity:1} }
+@keyframes animatefadeout { from{top:0; opacity:1} to {top: -1px; opacity:0} }
+
+.animate-zoom {
+  -webkit-animation: animatezoom 0.8s;
+  animation: animatezoom 0.8s
+}
+
+.animate-fade-in {
+  position: relative;
+  -webkit-animation: animatefadein 0.4s;
+  animation: animatefadein 0.4s;
+}
+
+.animate-fade-out {
+  position: relative;
+  -webkit-animation: animatefadeout 0.4s;
+  animation: animatefadeout 0.4s;
+}

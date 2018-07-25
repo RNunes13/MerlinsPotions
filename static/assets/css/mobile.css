@@ -1,0 +1,164 @@
+/***********************
+  Element: Menu Toggle
+************************/
+.header-main-toggle-menu-icon {
+  cursor: pointer;
+}
+
+.menuHambunger {
+  margin: 6px auto;
+  width: 35px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #50356C;
+}
+
+.rotate .menuHambunger:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+  transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.rotate .menuHambunger:nth-child(2) {
+  opacity: 0;
+}
+
+.rotate .menuHambunger:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  /************************
+    Main Header;
+  ************************/  
+  .header-main-search {
+    width: 85%;
+  }
+
+  .header-main-logo {
+    width: 65%;
+  }
+
+  .header-main-toggle-menu:not(.rotate) {
+    width: 15%;
+    margin: 0 auto;
+  }
+
+  .header-main-bag {
+    flex-direction: column;
+    width: 20%;
+  }
+
+  .header-main-bag img {
+    margin-right: 0;
+  }
+
+  .header-main-shipping-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    background-color: #ECECEC;
+  }
+
+  .header-main-shipping-toggle {
+    font-size: 20px;
+    color: #828282;
+  }
+
+  /************************
+    Nav Header;
+  ************************/ 
+  .header-nav {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .header-nav-menu {
+    flex-direction: column;
+  }
+
+  .header-nav-menu li {
+    margin-right: 0;
+    border-radius: 0;
+    padding-left: 40px;
+  }
+
+  .header-nav-menu li:not(:last-child):not(:nth-child(5)) {
+    border-bottom: 1px solid #6B5383;
+  }
+
+  .header-nav-menu li:not(:last-child):after {
+    content: none;
+  }
+
+  .header-nav-sign {
+    margin: 20px auto;
+  }
+
+  /************************
+    Main
+  ************************/
+  .close-modal {
+    position: fixed;
+    margin-left: -10px;
+  }
+
+  .potions-container {
+    padding: 10px;
+  }
+
+  .potions-grid-title {
+    text-align: center;
+  }
+  .potion-item {
+    width: 50%;
+  }
+
+  .potions-modal-content {
+    height: 95%;
+    width: 95%;
+    overflow-y: scroll;
+  }
+
+  .potion-info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .potion-info-image {
+    height: 200px;
+  }
+
+  .potion-info-descr {
+    margin-bottom: 30px;
+  }
+
+  /************************
+    Footer
+  ************************/ 
+  footer .container {
+    flex-flow: column-reverse wrap;
+  }
+
+  .footer-links-socias {
+    width: auto;
+    margin: 30px 0;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-social-icons a {
+    margin-right: 0;
+  }
+
+  .footer-rigths {
+    text-align: center;
+  }
+
+}

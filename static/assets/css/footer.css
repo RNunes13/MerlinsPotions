@@ -1,0 +1,79 @@
+footer {
+  padding: 30px;
+  background-color: #E6E6E6;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*****************************
+  Element: Links and Sociais
+******************************/
+.footer-links-socias {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 30px;
+}
+
+.footer-links-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.footer-links-items li {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #D93A1E;
+}
+
+.footer-social-icons a {
+  margin-right: 30px;
+}
+
+/*****************************
+  Element: Newsletter
+******************************/
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color:  #FFF;
+  border-radius: 4px;
+}
+
+.footer-newsletter > span {
+  margin-bottom: 15px;
+}
+
+.footer-newsletter-title {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.footer-newsletter-group {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.footer-newsletter-group input {
+  width: 70%;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.footer-newsletter-group button {
+  width: 25%;
+}
+
+.footer-rights {
+  color: #666666;
+}

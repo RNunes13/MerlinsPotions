@@ -1,0 +1,104 @@
+/******************************
+  Element: Container Potions;
+*******************************/
+.potions-container {
+  padding: 30px;
+}
+
+.potions-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.potion-item {
+  width: 33.3%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.potion-item-image {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.potion-item-image img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.potion-item-descr {
+  font-weight: bold;
+}
+
+.potion-item-descr-price {
+  color: red;
+  font-weight: normal;
+}
+
+/******************************
+  Element: Modal Potions;
+*******************************/
+.potions-modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  transition: all 1s;
+}
+
+.close-modal {
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  height: max-content;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  color: #FF0000
+}
+
+.potions-modal-content {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 80%;
+  background-color: #FEFEFE;
+  border: 1px solid #888;
+  border-radius: 2px;
+  transition: all 1s;
+}
+
+.potion-info {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+
+.potion-info-image {
+  height: 400px;
+}
+
+.potion-info-descr button {
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.potion-info-descr-ingredients {
+  list-style: none;
+  padding-left: 0;
+}
+
+.potion-info-descr-price-up {
+  margin-bottom: 0;
+}
+
+.potion-info-descr-price-down {
+  margin-top: 0;
+  color: #D73A1E;
+}
