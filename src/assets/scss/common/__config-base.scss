@@ -1,11 +1,22 @@
 /**
  * Settings
  */
- @import './settings/_colors.scss';
- @import './settings/_fonts.scss';
- @import './settings/_typography.scss';
+@import './settings/_colors.scss';
+@import './settings/_fonts.scss';
+@import './settings/_typography.scss';
 
- /**
+/**
+ * Tools
+ */
+@import './tools/_breakpoint.scss';
+@import './tools/_mixins.scss';
+
+/**
  * Vendor | Mixins
  */
 @import './vendor/sass-rem/_rem.scss';
+
+/**
+ * Components
+ */
+@import './components/_buttons.scss';

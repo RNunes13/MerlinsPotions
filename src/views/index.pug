@@ -9,16 +9,12 @@ block vars
 block append styles
   link(href=`assets/css/merlins-${$templateName}.css`, media='all' rel='stylesheet')/
 
-//- Headder
-block header
-  include ./_common/_header.pug
-
 //- Main Content
 block content
-  div(class='x-home__content')
-
-//- Footer
-block footer
+  div(class='x-home__container')
+    h1(class='x-home__title') Potions
+    div(class='x-home__not-loaded') It wasn't possible to obtain the potions... Check your browser console for more details.
+    div(class='x-home__grid')
 
 //- Page scripts
 block append scripts

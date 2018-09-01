@@ -1,0 +1,15 @@
+.x-home {
+  &__container {
+    @include rem(padding, 30px);
+  }
+
+  &__title {
+    @include rem(font-size, 25px);
+  }
+
+  &__not-loaded {
+    @include rem(padding, 20px 0);
+    display: none;
+    text-align: center;
+  }
+}

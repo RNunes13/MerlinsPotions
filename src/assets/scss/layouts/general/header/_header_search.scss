@@ -1,0 +1,25 @@
+.x-header {
+  &__search {
+
+    &-group {
+      @include rem(border-radius, 5px);
+      @include rem(padding, 10px);
+      display: flex;
+      border: 1px solid #333333;
+    }
+
+    &-icon {
+      @include rem(width, 20px);
+      @include rem(height, 20px);
+      @include rem(margin-right, 10px);
+    }
+
+    &-input {
+      @include rem(width, 200px);
+      @include rem(border-radius, 5px);
+      @include rem(font-size, 14px);
+      font-family: $font-open;
+      border: none;
+    }
+  }
+}

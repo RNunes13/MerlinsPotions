@@ -1,0 +1,13 @@
+.x-navbar {
+  @include rem(padding, 10px 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-purple;
+  color: #fff;
+  font-weight: 300;
+
+  @include breakpoint(max-width, 996px) {
+    flex-direction: column;
+  }
+}

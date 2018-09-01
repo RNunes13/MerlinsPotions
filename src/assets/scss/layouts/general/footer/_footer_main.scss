@@ -1,0 +1,9 @@
+.x-footer {
+  &__container {
+    @include rem(padding, 20px 30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: $color-gray-light;
+  }
+}

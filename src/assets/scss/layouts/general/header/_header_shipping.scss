@@ -1,0 +1,15 @@
+.x-header {
+  &__shipping {
+    color: $color-red;
+    text-align: center;
+    font-weight: 300;
+
+    span:first-child {
+      @include rem(font-size, 23px);
+    }
+
+    span:last-child {
+      display: block;
+    }
+  }
+}

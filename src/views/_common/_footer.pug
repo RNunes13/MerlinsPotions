@@ -1,0 +1,28 @@
+//- Variables
+- var links = [{href: '#', name: 'Company'},{href: '#', name: 'Contact Us'},{href: '#', name: 'Shipping'},{href: '#', name: 'Returns'},{href: '#', name: 'Careers'}];
+- var social = [{href: '#', src: 'assets/img/icons/face.png', name: 'Facebook'},{href: '#', src: 'assets/img/icons/twitter.png', name: 'Twitter'},{href: '#', src: 'assets/img/icons/pinterest.png', name: 'Pinterest'},{href: '#', src: 'assets/img/icons/telegram.png', name: 'Telegram'},{href: '#', src: 'assets/img/icons/googlePlus.png', name: 'Google Plus'}];
+
+footer(class='x-footer')
+  div(class='x-footer__container')
+    div(class='x-footer__links')
+      ul(class='x-footer__links-company')
+        each link in links
+          li
+            a(href=link.href) #{link.name}
+      
+      div(class='x-footer__links-social')
+        div(class='x-footer__links-social-icons')
+          each item in social
+            a(href=item.href)
+              img(src=item.src alt=item.name title=item.name)
+    
+    div(class='x-footer__newsletter')
+      span(class='x-footer__newsletter-title') Sign up for our Newsletter
+      span(class='x-footer__newsletter-sub') Sign up for our newsletter & get exclusive discounts!
+      form(name='form-newsleter')
+        div(class='x-footer__newsletter-group')
+          input(class='x-footer__newsletter-input' type='email' name='email' required placeholder='Enter your email')
+          button(class='x-footer__newsletter-button' type='button') Submit
+
+    div(class='x-footer__copyright')
+      p &copy; 2018 Merlin's Potions. All Rights Reserved

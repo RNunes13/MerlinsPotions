@@ -1,0 +1,21 @@
+.x-header {
+  &__cart {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      @include rem(margin-right, 10px);
+    }
+
+    &-description {
+      @include rem(font-size, 20px);
+      @include rem(letter-spacing, 1px);
+      color: #b3b3b3;
+    }
+
+    &-count {
+      color: $color-red;
+      font-weight: 600;
+    }
+  }
+}

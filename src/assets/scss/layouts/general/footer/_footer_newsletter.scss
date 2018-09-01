@@ -1,0 +1,37 @@
+.x-footer {
+  &__newsletter {
+    @include rem(border-radius, 5px);
+    @include rem(padding, 30px 20px);
+    box-sizing: border-box;
+    background: $color-white;
+
+    span {
+      @include rem(margin-bottom, 10px);
+      display: block;
+      font-weight: 300;
+    }
+
+    &-title {
+      text-align: center
+    }
+
+    &-group {
+      display: flex;
+    }
+
+    &-input {
+      @include rem(margin-right, 10px);
+      @include rem(padding, 10px);
+      @include rem(width, 250px);
+      @include rem(border-radius, 5px);
+      @include rem(font-size, 14px);
+      border: 1px solid #000;
+      font-family: $font-open;
+    }
+
+    &-button {
+      @extend %btn--primary;
+      @include rem(width, 80px);
+    }
+  }
+}

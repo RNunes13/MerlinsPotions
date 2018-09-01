@@ -1,0 +1,22 @@
+.x-navbar {
+  &-sign {
+    @include rem(padding, 10px 0);
+    span {
+      @include rem(margin, 0 5px);
+      @include rem(border-radius, 5px);
+    }
+    &-or {
+      @include rem(font-size, 20px);
+      color: #bc9bd4;
+    }
+
+    span:not(.x-navbar-sign-or) {
+      @include rem(padding, 5px 10px);
+      cursor: pointer;
+
+      &:hover {
+        background-color: #6C5180;
+      }
+    }
+  }
+}

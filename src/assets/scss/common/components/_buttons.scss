@@ -1,0 +1,32 @@
+%btn {
+  @include rem(border-radius, 5px);
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  border: 1px solid transparent;
+
+  &--primary {
+    @extend %btn;
+    @include rem(font-size, 14px);
+    @include rem(letter-spacing, 2px);
+    border: 1px solid $color-red;
+    font-family: $font-open;
+    font-weight: 600;
+    background-color: $color-red;
+    color: $color-white;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $color-red;
+      color: $color-red;
+    }
+  }
+
+  &--primary-fill {
+    @extend %btn--primary;
+    background-color: $color-white;
+    color: $color-red;
+    border: 1px solid $color-red;
+  }
+}

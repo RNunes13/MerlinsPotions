@@ -20,14 +20,15 @@ html(lang='pt-BR')
 
   body
     //- Header
-    block header
+    include ./../_common/_header.pug
+    include ./../_common/_navbar.pug
 
     //- Main Content
     main(class=`x-${$templateClass}__main`)
       block content
 
     //- Footer
-    block footer
+    include ./../_common/_footer.pug
 
     //- Scripts
     block scripts
