@@ -1,0 +1,12 @@
+- var items = [{href: '#', name: 'Potions'},{href: '#', name: 'Ingredients'},{href: '#', name: 'Books'},{href: '#', name: 'Supplies'},{href: '#', name: 'Charms'},{href: '#', name: 'Clearance!'}]
+
+nav(class='x-navbar')
+  ul(class='x-navbar-items')
+    each item in items
+      li
+        a(href=item.href) #{item.name}
+  
+  div(class='x-navbar-sign')
+    span Sign In
+    span(class='x-navbar-sign-or') or
+    span Sign Up

@@ -1,0 +1,25 @@
+extends ./_layouts/_base.pug
+
+//- Template variables
+block vars
+  - var $templateName = 'home'
+  - var $templateClass = 'home'
+
+//- Page styles
+block append styles
+  link(href=`assets/css/merlins-${$templateName}.css`, media='all' rel='stylesheet')/
+
+//- Headder
+block header
+  include ./_common/_header.pug
+
+//- Main Content
+block content
+  div(class='x-home__content')
+
+//- Footer
+block footer
+
+//- Page scripts
+block append scripts
+

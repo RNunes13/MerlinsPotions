@@ -1,0 +1,10 @@
+@import './__config-base.scss';
+
+/**
+ * Generic
+ */
+@import './generic/_reset.scss';
+
+html {
+    font-family: $font-oswald;
+}

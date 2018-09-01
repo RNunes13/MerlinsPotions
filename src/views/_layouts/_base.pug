@@ -1,0 +1,33 @@
+include ./../_mixins/_title.pug
+include ./../_mixins/_metaTags.pug
+
+- var $templateName = ''
+- var $templateClass = ''
+
+block vars
+
+doctype
+html(lang='pt-BR')
+  head
+
+    +metaTags()
+    +title('Home')
+
+    //- Styles
+    block styles
+      link(href='assets/css/common/merlins-common-globals.css' rel='stylesheet' media='all')
+      link(href='assets/css/merlins-general.css' rel='stylesheet' media='all')
+
+  body
+    //- Header
+    block header
+
+    //- Main Content
+    main(class=`x-${$templateClass}__main`)
+      block content
+
+    //- Footer
+    block footer
+
+    //- Scripts
+    block scripts

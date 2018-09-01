@@ -1,0 +1,48 @@
+.x-header {
+  &__container {
+    @include rem(padding, 15px 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
+    text-align: center;
+    &-title {
+      @include rem(font-size, 35px);
+      color: $color-red;
+      font-weight: 700;
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+    &-sub {
+      position: relative;
+
+      h4 {
+        @include rem(width, 150px);
+        margin: 0 auto;
+        font-weight: 300;
+        color: $color-purple-lighten;
+        background: #fff;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        background-color: #B9B9B9;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__menu-icon {
+    display: none;
+  }
+}
