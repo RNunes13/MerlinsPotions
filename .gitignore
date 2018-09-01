@@ -53,4 +53,6 @@ node_modules/
 # App archives
 *.map
 *.log
+*.css
 dist/
+.firebase
