@@ -3,7 +3,6 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
-var uglify = require('gulp-uglify');
 var notify = require("gulp-notify");
 var clean = require('gulp-clean');
 var concat = require("gulp-concat");
@@ -44,7 +43,6 @@ var task = {
 
   js: function () {
     return gulp.src([`${assetsSrc}/js/**/*.js`, `!${assetsSrc}/js/common/**/*.js`])
-      .pipe(uglify())
       .on('error', utils.swallowError)
       .pipe(gulp.dest(`${assetsDist}/js`));
   },
@@ -52,7 +50,6 @@ var task = {
   jsGlobal: function () {
     return gulp.src(`${assetsSrc}/js/common/**/*.js`)
       .pipe(concat('merlins-global.js'))
-      .pipe(uglify())
       .on('error', utils.swallowError)
       .pipe(gulp.dest(`${assetsDist}/js/`));
   },

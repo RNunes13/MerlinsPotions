@@ -3,14 +3,24 @@
     display: flex;
     align-items: center;
 
+    @include mq('sm', max) {
+      flex-direction: column;
+    }
+
     &-icon {
-      @include rem(margin-right, 10px);
+      @include mq('sm') {
+        @include rem(margin-right, 10px);
+      }
     }
 
     &-description {
       @include rem(font-size, 20px);
       @include rem(letter-spacing, 1px);
       color: #b3b3b3;
+
+      @include mq('sm', max) {
+        @include rem(font-size, 16px);
+      }
     }
 
     &-count {

@@ -1,0 +1,32 @@
+.x-navbar {
+  &-submenus {
+    @include rem(border-radius, 5px);
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    @include mq('sm') {
+      background-color: #6C5180;
+      @include rem(padding, 10px);
+    }
+
+    @include mq('sm', max) {
+      position: inherit;
+      @include rem(padding, 10px 0);
+    }
+
+    > li {
+      @include rem(padding, 5px 15px);
+      @include rem(border-radius, 5px);
+
+      &:hover {
+        background-color: #4a315d;
+      }
+
+      a {
+        @include rem(font-size, 15px);
+      }
+    }
+  }
+}

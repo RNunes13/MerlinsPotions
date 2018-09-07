@@ -1,6 +1,14 @@
 .x-header {
   &__search {
 
+    @include mq('sm', max) {
+      width: 90%;
+      
+      &:not(.is--active) {
+        display: none;
+      }
+    }
+
     &-group {
       @include rem(border-radius, 5px);
       @include rem(padding, 10px);

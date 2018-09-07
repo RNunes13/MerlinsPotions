@@ -1,14 +1,21 @@
 header(class='x-header')
   div(class='x-header__container')
-    div(class='x-header__menu-icon')
 
-    div(class='x-header__logo')
+    div(class='x-header__menu js--menu')
+      span(class='x-header__menu-icon')
+        svg
+          g(id='cross_svg')
+            rect(id='line-1' x='0' y='8' rx='5' width='100%' height='4' fill='#000')
+            rect(id='line-2' x='0' y='17' rx='5' width='100%' height='4' fill='#000')
+            rect(id='line-3' x='0' y='26' rx='5' width='100%' height='4' fill='#000')
+
+    div(class='x-header__logo js--logo')
       h1(class='x-header__logo-title') Merlin's 
         span Potions
       div(class='x-header__logo-sub')
         h4 fine potions since 1026
 
-    div(class='x-header__search')
+    div(class='x-header__search js--search')
       form(class='form-search-stock' name='form-search')
         div(class='x-header__search-group')
           img(class='x-header__search-icon' src='assets/img/icons/search.svg' alt='Search')
@@ -19,7 +26,11 @@ header(class='x-header')
         span Free shipping
         span on orders over $50
 
-    div(class='x-header__cart')
+    div(class='x-header__cart js--cart')
       img(class='x-header__cart-icon' src='assets/img/icons/cart.png' alt='Cart')
       span(class='x-header__cart-description') BAG: 
         span(class='x-header__cart-count') 0
+
+div(class='x-header__shipping-mobile')
+  div
+    span Free shipping on orders over $50

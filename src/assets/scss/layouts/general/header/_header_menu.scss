@@ -1,0 +1,42 @@
+.x-header {
+  &__menu {
+
+    @include mq('sm') {
+      display: none;
+    }
+
+    &-icon {
+      cursor: pointer;
+      svg {
+        @include rem(width, 35px);
+        @include rem(height, 35px);
+      }
+    }
+
+    &.js--menu {
+      #cross_svg {
+        rect {
+          transform: translateX(0);
+          fill: $color-purple;
+          transition: all .3s ease;
+        }
+      }
+    }
+
+    &.js--menu-opened {
+      @include rem(padding-top, 5px);
+
+      #cross_svg {
+        #line-1 {
+          transform: rotate(45deg) translate(20%,-25%);
+        }
+        #line-2 {
+          transform: translateX(-105%);
+        }
+        #line-3 {
+          transform: rotate(-45deg) translate(-50%,-5%);
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,29 @@
 .x-navbar {
-  @include rem(padding, 10px 50px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color-purple;
   color: #fff;
   font-weight: 300;
+  transition: all 0.4s;
 
   @include breakpoint(max-width, 996px) {
     flex-direction: column;
+  }
+
+  @include mq('sm') {
+    @include rem(padding, 10px 50px);
+  }
+
+  @include mq('sm', max) {
+    @include rem(padding, 10px 20px);
+    transform: translateY(-36px);
+    position: fixed;
+    width: 95%;
+
+    &:not(.is--active) {
+      opacity: 0;
+      transform: translateY(-150%);
+    }
   }
 }

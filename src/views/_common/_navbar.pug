@@ -1,10 +1,18 @@
-- var items = [{href: '#', name: 'Potions'},{href: '#', name: 'Ingredients'},{href: '#', name: 'Books'},{href: '#', name: 'Supplies'},{href: '#', name: 'Charms'},{href: '#', name: 'Clearance!'}]
+- var items = [{href: '#', name: 'Potions', submenus: [{href: '#', name: 'Potions 1'},{href: '#', name: 'Potions 2'}]},{href: '#', name: 'Ingredients', submenus: [{href: '#', name: 'Ingredients 1'}]},{href: '#', name: 'Books'},{href: '#', name: 'Supplies', submenus: [{href: '#', name: 'Supplies 1'},{href: '#', name: 'Supplies 2'},{href: '#', name: 'Supplies 3'}]},{href: '#', name: 'Charms'},{href: '#', name: 'Clearance!'}]
 
-nav(class='x-navbar')
+nav(class='x-navbar js--navbar')
   ul(class='x-navbar-items')
     each item in items
-      li
-        a(href=item.href) #{item.name}
+      if item.submenus
+        li(class='has--drop')
+          a(href=item.href) #{item.name}
+          ul(class='x-navbar-submenus')
+            each submenu in item.submenus
+              li
+                a(href=submenu.href) #{submenu.name}
+      else 
+        li
+          a(href=item.href) #{item.name}
   
   div(class='x-navbar-sign')
     span Sign In

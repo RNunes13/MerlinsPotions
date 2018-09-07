@@ -1,10 +1,17 @@
-let oApp;
+(function() {
+  'use strict';
+  let firebase = new Firebase();
+  let services = new Services();
 
-document.addEventListener("DOMContentLoaded", () => {
-  oApp = new app();
-  oApp.init('GET', 'https://raw.githubusercontent.com/enextgroup/quero-trabalhar-na-enext/master/assets/potions.json');
-});
+  firebase.init({
+    apiKey: "AIzaSyDG-Scc3SR21j75DF3d2jWyYmv09GdZTuQ",
+    authDomain: "merlins-potions.firebaseapp.com",
+    projectId: "merlins-potions",
+  })
 
-window.addEventListener("resize", () => {
-  oApp.resize()
-});
+  firebase.get('potions')
+  .then(docs => {
+    //load(docs);
+  })
+
+})();
