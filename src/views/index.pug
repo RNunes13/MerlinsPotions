@@ -7,15 +7,15 @@ block vars
 
 //- Page styles
 block append styles
-  link(href=`assets/css/merlins-${$templateName}.css`, media='all' rel='stylesheet')/
+  link(href=`assets/css/merlins_potions-${$templateName}.css`, media='all' rel='stylesheet')/
 
 //- Main Content
 block content
   div(class='x-home__container')
     h1(class='x-home__title') Potions
     div(class='x-home__not-loaded') It wasn't possible to obtain the potions... Check your browser console for more details.
-    div(class='x-home__grid')
+    div(class='x-home__grid js--home-grid')
 
 //- Page scripts
 block append scripts
-
+  script(src=`assets/js/merlins_potions-${$templateName}.js`)

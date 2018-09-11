@@ -1,0 +1,44 @@
+.x-potion {
+  @include rem(margin-bottom, 25px);
+  text-align: center;
+
+  &__image {
+    margin: 0 auto;
+    @include mq('sm') {
+      @include rem(width, 200px);
+      @include rem(height, 200px);
+    }
+    @include mq('sm', max) {
+      @include rem(width, 150px);
+      @include rem(height, 150px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__description {
+    font-family: $font-open;
+    &-name {
+      font-weight: 700;
+    }
+    &-price {
+      font-weight: 400;
+      color: red;
+    }
+  }
+
+  @include breakpoint(min-width, 996px) {
+    width: 25%;
+  }
+  @include breakpoint(max-width, 995px) {
+    width: 33.333%;
+  }
+  @include mq('sm', max) {
+    width: 50%;
+  }
+  @include breakpoint(max-width, 469px) {
+    width: 100%;
+  }
+}

@@ -12,4 +12,11 @@
     display: none;
     text-align: center;
   }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
