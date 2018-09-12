@@ -13,10 +13,26 @@
     text-align: center;
   }
 
+  &__loading {
+    text-align: center;
+    img {
+      @include rem(width, 150px);
+    }
+
+    &.is--hidden {
+      display: none;
+    }
+  }
+
   &__grid {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @include rem(margin, 10px 0);
+    
+    &.is--empty {
+      display: none !important;
+    }
   }
 }

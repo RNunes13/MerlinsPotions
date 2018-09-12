@@ -14,7 +14,13 @@ block content
   div(class='x-home__container')
     h1(class='x-home__title') Potions
     div(class='x-home__not-loaded') It wasn't possible to obtain the potions... Check your browser console for more details.
-    div(class='x-home__grid js--home-grid')
+    div(class='x-home__loading is--hidden js--home-loading')
+      figure(class='x-home__loading-image')
+        img(src='assets/img/loading.svg' alt='Loading ...' title='Loading ...')
+        figcaption Loading potions ...
+
+    div(class='x-home__grid is--empty js--home-grid')
+
 
 //- Page scripts
 block append scripts

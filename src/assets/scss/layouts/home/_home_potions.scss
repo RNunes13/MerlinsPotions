@@ -1,6 +1,17 @@
 .x-potion {
   @include rem(margin-bottom, 25px);
+  @include rem(padding, 15px 10px);
+  @include rem(border-radius, 10px);
+  box-sizing: border-box;
   text-align: center;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #f1f1f1;
+    img {
+      transform: rotate(-5deg);
+    }
+  }
 
   &__image {
     margin: 0 auto;
@@ -15,6 +26,7 @@
     img {
       width: 100%;
       height: 100%;
+      transition: all .3s;
     }
   }
 
@@ -27,6 +39,13 @@
       font-weight: 400;
       color: red;
     }
+  }
+
+  &__details {
+    @extend %btn--primary;
+    @include rem (margin-top, 10px);
+    @include rem (padding, 7px 15px);
+    @include rem (font-size, 11px);
   }
 
   @include breakpoint(min-width, 996px) {

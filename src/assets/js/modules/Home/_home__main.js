@@ -9,6 +9,15 @@ const Methods = {
     Methods.getPotions();
   },
 
+  loading(loaded = false) {
+    if (!loaded) {
+      $(El.loading).removeClass('is--hidden');
+    } else {
+      $(El.loading).addClass('is--hidden');
+      $(El.grid).removeClass('is--empty');
+    }
+  },
+
   initFirebase() {
     console.log('Initializing Firebase');
     Firebase.init({
@@ -20,9 +29,14 @@ const Methods = {
 
   getPotions() {
     console.log('Getting potions ...');
+    this.loading();
     Firebase.get('potions')
     .then((resp) => {
+      console.log('Potions received.');
       this.loadPotion(resp);
+    }, (err) => {
+      this.loading(true);
+      console.error('There was an error getting the potions');
     });
   },
 
@@ -39,9 +53,17 @@ const Methods = {
       let eDescr = Services.createElement('div', [{class: 'x-potion__description'}], ePotion);
 
       Services.createElement('span', [{class: 'x-potion__description-name'}], eDescr, `${potion.name} - `);
-
       Services.createElement('span', [{class: 'x-potion__description-price'}], eDescr, `$${potion.price}`);
+      Services.createElement('button', [{class: 'x-potion__details'}], ePotion, 'More details', {click: ()=> {
+        Methods.clickEvent(potion);
+      }});
     });
+
+    this.loading(true);
+  },
+
+  clickEvent(potion) {
+    console.log(potion);
   },
 };
 
