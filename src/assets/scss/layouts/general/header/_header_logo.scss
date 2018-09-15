@@ -9,6 +9,18 @@
       span {
         font-weight: 300;
       }
+
+      @include breakpoint(max-width, 996px) {
+        @include rem(font-size, 30px !important);
+      }
+
+      @include breakpoint(max-width, 469px) {
+        @include rem(font-size, 20px !important);
+      }
+
+      @include mq('sm', max) {
+        @include rem(font-size, 25px);
+      }
     }
 
     &-sub {
@@ -20,6 +32,10 @@
         font-weight: 400;
         color: $color-purple-lighten;
         background: #fff;
+
+        @include breakpoint(max-width, 469px) {
+          @include rem(font-size, 14px);
+        }
       }
 
       &::before {

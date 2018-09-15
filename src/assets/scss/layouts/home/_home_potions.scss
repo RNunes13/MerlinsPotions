@@ -1,15 +1,30 @@
 .x-potion {
   @include rem(margin-bottom, 25px);
-  @include rem(padding, 15px 10px);
+  @include rem(padding, 20px 10px);
   @include rem(border-radius, 10px);
+  position: relative;
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
 
+  &__wishlist {
+    &::before {
+      @include rem(width, 25px);
+      @include rem(height, 25px);
+      @include rem(top, 15px);
+      @include rem(right, 15px);
+      content: '';
+      position: absolute;
+      background: url('/assets/img/icons/wishlist-fill.svg') no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+
   &:hover{
     background-color: #f1f1f1;
-    img {
-      transform: rotate(-5deg);
+    img:not(.loading-image) {
+      transform: scale(1.1);
     }
   }
 
@@ -30,35 +45,37 @@
     }
   }
 
-  &__description {
-    font-family: $font-open;
-    &-name {
-      font-weight: 700;
+  &__price {
+    @include rem(padding, 10px 20px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include between-breakpoints(470px, 550px) {
+      flex-direction: column;
+
+      &-buy {
+        @include rem(margin-top, 5px);
+      }
     }
-    &-price {
-      font-weight: 400;
-      color: red;
+
+    &-value {
+      @include rem(font-size, 20px);
+      color: $color-red;
+    }
+
+    &-buy {
+      @extend %btn--primary;
+      @include rem (padding, 7px 30px);
+      @include rem (font-size, 14px);
+      @include rem (border-radius, 50px);
     }
   }
 
-  &__details {
-    @extend %btn--primary;
-    @include rem (margin-top, 10px);
-    @include rem (padding, 7px 15px);
-    @include rem (font-size, 11px);
-    @include rem (border-radius, 50px);
-  }
-
-  @include breakpoint(min-width, 996px) {
-    width: 25%;
-  }
-  @include breakpoint(max-width, 995px) {
-    width: 33.333%;
-  }
-  @include mq('sm', max) {
-    width: 50%;
-  }
-  @include breakpoint(max-width, 469px) {
-    width: 100%;
-  }
+  @include breakpoint(min-width, 1500px) { width: 20% !important; }
+  @include breakpoint(min-width, 996px) { width: 25%; }
+  @include breakpoint(max-width, 995px) { width: 33.333%; }
+  @include mq('sm', max) { width: 50%; }
+  @include breakpoint(max-width, 469px) { width: 100%; }
 }

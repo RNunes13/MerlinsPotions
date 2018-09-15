@@ -1,6 +1,9 @@
 export default {
   header: {
     grid: $('.js--home-grid'),
-    loading: $('.js--home-loading'),
+    loading: {
+      potions: $('.js--home-loading'),
+      image: null,
+    },
   },
 };

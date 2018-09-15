@@ -18,9 +18,12 @@
 
     &-mobile {
       @include rem(height, 35px);
+      position: fixed;
+      top: 106px;
+      z-index: 1;
       width: 100%;
-      text-align: center;
       background-color: $color-gray-light;
+      text-align: center;
 
       @include mq('sm') {
         display: none;
@@ -28,7 +31,6 @@
 
       div {
         @include rem(margin-top, 3px);
-        @include rem(padding, 3px);
       }
 
       span {

@@ -19,6 +19,7 @@
     "max-len": "off",
     "require-jsdoc": "off",
     "valid-jsdoc": "off",
+    "no-invalid-this": "off",
     "linebreak-style": ["error", "windows"]
   }
 }

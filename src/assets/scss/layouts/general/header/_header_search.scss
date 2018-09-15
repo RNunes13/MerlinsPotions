@@ -12,6 +12,7 @@
     &-group {
       @include rem(border-radius, 5px);
       @include rem(padding, 10px);
+      @include rem(border-radius, 50px);
       display: flex;
       border: 1px solid #333333;
     }

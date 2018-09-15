@@ -4,7 +4,7 @@ export default {
     navbar: $('.js--navbar'),
     logo: $('.js--logo'),
     search: $('.js--search'),
-    cart: $('.js--cart'),
+    actions: $('.js--actions'),
   },
   navbar: {
     self: $('.js--navbar'),

@@ -1,5 +1,10 @@
 .x-header {
   @include rem(height, 100px);
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 
   &__container {
     @include rem(padding, 10px 30px);
@@ -8,5 +13,9 @@
     align-items: center;
     box-sizing: border-box;
     height: 100%;
+
+    @include mq('sm', max) {
+      @include rem(padding, 10px 15px);
+    }
   }
 }

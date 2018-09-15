@@ -1,0 +1,53 @@
+.x-header {
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    > div {
+      @include mq('sm') {
+        @include rem(margin-left, 10px);
+      }
+      
+      @include mq('sm', max) {
+        @include rem(margin-left, 5px);
+      }
+
+    }
+
+    img {
+      @include rem(width, 35px);
+      @include rem(height, 35px);
+      cursor: pointer;
+
+      @include breakpoint(max-width, 469px) {
+        @include rem(width, 30px);
+        @include rem(height, 30px);
+      }
+    }
+
+    &-account {
+      &-icon {
+        @include rem(margin-top, 5px);
+      }
+    }
+
+    &-cart {
+      display: flex;
+      align-items: center;
+
+      &-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #e6e6e6;
+
+        @include breakpoint(min-width, 470px) {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
