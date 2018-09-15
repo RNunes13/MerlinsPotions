@@ -46,6 +46,7 @@
     @include rem (margin-top, 10px);
     @include rem (padding, 7px 15px);
     @include rem (font-size, 11px);
+    @include rem (border-radius, 50px);
   }
 
   @include breakpoint(min-width, 996px) {

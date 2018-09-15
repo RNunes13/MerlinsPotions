@@ -28,6 +28,10 @@
       @include rem(font-size, 14px);
       font-family: $font-open;
       border: none;
+
+      @include mq('sm', max) {
+        width: 100%;
+      }
     }
   }
 }

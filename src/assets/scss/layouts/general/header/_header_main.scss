@@ -1,8 +1,12 @@
 .x-header {
+  @include rem(height, 100px);
+
   &__container {
     @include rem(padding, 10px 30px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    height: 100%;
   }
 }

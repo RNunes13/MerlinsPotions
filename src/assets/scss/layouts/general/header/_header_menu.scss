@@ -25,16 +25,19 @@
 
     &.js--menu-opened {
       @include rem(padding-top, 5px);
+      @include rem(margin-right, 20px);
 
       #cross_svg {
         #line-1 {
-          transform: rotate(45deg) translate(20%,-25%);
+          transform: rotate(45deg) translateY(25%);
+          transform-origin: center;
         }
         #line-2 {
-          transform: translateX(-105%);
+          opacity: 0;
         }
         #line-3 {
-          transform: rotate(-45deg) translate(-50%,-5%);
+          transform: rotate(-45deg) translateY(-25%);
+          transform-origin: center;
         }
       }
     }

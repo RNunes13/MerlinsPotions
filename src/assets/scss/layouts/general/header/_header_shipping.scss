@@ -28,6 +28,7 @@
 
       div {
         @include rem(margin-top, 3px);
+        @include rem(padding, 3px);
       }
 
       span {
