@@ -14,8 +14,8 @@ body.has--no-scroll {
 }
 
 main {
-  @include mq('sm') { margin-top: 175px; }
-  @include mq('sm', max) { margin-top: 143px !important; }
+  @include mq('sm') { margin-top: 168px; }
+  @include mq('sm', max) { margin-top: 137px !important; }
 }
 
 .x-overlay {

@@ -19,7 +19,7 @@
     &-mobile {
       @include rem(height, 35px);
       position: fixed;
-      top: 106px;
+      top: 100px;
       z-index: 1;
       width: 100%;
       background-color: $color-gray-light;

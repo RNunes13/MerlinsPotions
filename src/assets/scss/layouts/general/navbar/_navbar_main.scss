@@ -17,7 +17,8 @@
   @include mq('sm', max) {
     @include rem(padding, 10px 20px);
     transform: translateX(0);
-    top: 143px;
+    top: 137px;
+    width: 95%;
 
     &:not(.is--active) {
       opacity: 0;
